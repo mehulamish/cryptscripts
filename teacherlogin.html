@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</head>
+<style>
+    body{
+        background-color: #E6E6E6;
+    }
+    .mid1{
+    display: block;
+    width: 97%;
+    height: 7%;
+    margin: 10px auto;
+    border: 2px solid red;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: inline-block;
+    border: 2px solid rgb(89, 151, 244);
+    background-color: rgb(89, 151, 244);
+    opacity: 0.8;
+    border-radius: 25px;
+}
+.navbar1{
+    display: inline-block;
+}
+.navbar1 li{
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+}
+.navbar1 li a{
+    color: white;
+    text-decoration: none ;
+    padding: 34px 23px;
+}
+.navbar1 li a:hover, .navbar li a.active{
+    text-decoration: underline ;
+    color: gray;
+}
+.guide1{
+    background-color: rgb(116, 250, 79);
+    opacity: 0.9;
+display: block;
+width: 17%;
+height: 900px;
+margin: 20px;
+border: 2px solid rgb(116, 250, 79);
+display: inline-block;
+position:absolute;
+top: 80px;
+}
+.guide1 li{
+    color: white;
+    font-size: 15px;
+}
+.guide1 li a{
+    color: white;
+    text-decoration: none ;
+    padding: 34px 23px;
+}
+.guide1 li a:hover, .guide1 li a.active{
+    text-decoration: underline ;
+    color: gray;
+}
+.attendance{
+    display: block;
+width: 60%;
+height: 365px;
+margin: 20px auto;
+border: 2px solid rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);
+margin-top: 100px;
+border-radius: 20px;
+}
+.performance{
+    display: block;
+width: 60%;
+height: 250px;
+margin: 20px auto;
+border: 2px solid rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);
+border-radius: 20px;
+}
+.Extracurricular{
+    display: block;
+width: 60%;
+height: 150px;
+margin: 20px auto;
+border: 2px solid rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);
+border-radius: 20px;
+}
+.guide2{
+    background-color: rgb(244, 119, 119);
+    opacity: 0.9;
+display: block;
+width: 17%;
+height: 523px;
+margin: 20px;
+border: 2px solid rgb(244, 119, 119);
+display: inline-block;
+position:absolute;
+right: 10px;
+top: 80px;
+}
+.guide1{
+    background-color:  rgb(23, 73, 180);
+    opacity: 0.9;
+    list-style-type: none;
+display: block;
+width: 17%;
+height: 796px;
+margin: 20px;
+border: 2px solid rgb(23, 73, 180);
+display: inline-block;
+position:absolute;
+top: 80px;
+}
+.guide2 li{
+    color: white;
+    font-size: 15px;
+    list-style-type: none;
+}
+.guide2 li a{
+    color: white;
+    text-decoration: none ;
+    padding: 34px 23px;
+}
+.guide2 li a:hover, .guide2 li a.active{
+    text-decoration: underline ;
+    color: gray;
+}
+
+.guide3{
+    background-color: rgb(116, 250, 79);
+    opacity: 0.9;
+    display: block;
+width: 17%;
+height: 251px;
+margin: 20px;
+border: 2px solid rgb(116, 250, 79);
+display: inline-block;
+position:absolute;
+right: 10px;
+top: 626px;
+}
+.nav-break{
+    width: 1150px;
+}
+.chattery{
+    display: block;
+width: 17%;
+height: 251px;
+margin: 20px auto;
+display: inline-block;
+position:absolute;
+right: 170px;
+}
+.Classchat4{
+    display: block;
+width: 60px;
+height: 40px;
+margin: 20px;
+display: inline-block;
+position:absolute;
+left: 30px;
+}
+.container-chart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .marks-chart {
+        width: 40%;
+        height: 1%;
+    }
+
+    .marks-graph {
+        margin-left: 4%;
+        width: 40%;
+        height: 40%;
+    }
+    .container-attend {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35vh;
+    }
+
+    .attendance-graph {
+        width: 542px;
+        height: 250px;
+    }
+
+h1 {
+
+    color: #333333;
+}
+
+#statistics-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.box1 {position: absolute;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    left: 19.8%;
+}
+.box2 {position: absolute;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    left: 31.3%;
+}
+.box3 {position: absolute;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    left: 41.4%;
+}
+.box4 {position: absolute;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    left: 51.3%;
+}
+.box5 {position: absolute;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    left: 64.5%;
+}
+
+p {
+    margin: 0;
+}
+</style>
+<body>
+    <div class="homepage2">
+    <header class="header">
+        <!--logo-->
+          
+        <!--navigation-->
+        <div class="mid1">
+            <ul class="navbar1">
+                <li><a href="teacherprof.html">Teacher profile</a></li>
+                <li><div class="nav-break"> </div></li>
+                <li><a href="schoolweb.html">Logout</a></li>
+            </ul> 
+        </div>
+    </header>
+    <div class="guide1">
+        <img src="img/logo.png" alt="", height="250px", width="258px"><br>
+        <b>
+        <li><a href="#">Exam schedule</a></li><br>
+        <li><a href="messagetoteacher.html">Message For Class</a></li><br>
+        <li><a href="#">Project for Class</a></li><br>
+        <li><a href="Leaveapp.html">Leave Request</a></li><br>
+        <li><a href="#">Marks discripancy</a></li><br>
+        <li><a href="#">Meetings</a></li><br>
+        <li><a href="#">Extra class</a></li><br>
+        <li><a href="#">Salary</a></li><br>
+        </b>
+    </div>
+    <div class="attendance" height="auto", width="900px">
+        <div class="teacher-charts">
+            <div class="container-chart">
+                <div class="marks-chart">
+                    <canvas id="marksChart" width="auto" height="auto"></canvas>
+                </div>
+                <div class="marks-graph">
+                    <canvas id="barGraph" width="auto" height="auto"></canvas>
+                </div>
+            </div>
+        
+            <script>
+                // Array of student marks
+                const marks = [85, 92, 78, 90, 88, 95];
+        
+                // Get the canvas element
+                const marksCanvas = document.getElementById('marksChart').getContext('2d');
+        
+                // Create the chart
+                new Chart(marksCanvas, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Mark 1', 'Mark 2', 'Mark 3', 'Mark 4', 'Mark 5', 'Mark 6'],
+                        datasets: [{
+                            label: 'Student Marks',
+                            data: marks,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(255, 206, 86, 0.6)',
+                                'rgba(75, 192, 192, 0.6)',
+                                'rgba(153, 102, 255, 0.6)',
+                                'rgba(255, 159, 64, 0.6)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Student Marks Distribution'
+                        }
+                    }
+                });
+        
+                // Get the canvas element
+                const graphCanvas = document.getElementById('barGraph').getContext('2d');
+        
+                // Create the graph
+                new Chart(graphCanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Mark 1', 'Mark 2', 'Mark 3', 'Mark 4', 'Mark 5', 'Mark 6'],
+                        datasets: [{
+                            label: 'Student Marks',
+                            data: marks,
+                            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Student Marks'
+                        }
+                    }
+                });
+            </script>
+    
+        </div>
+    </div>
+    <div class="performance">
+        <div class="container-attend">
+            <div class="attendance-graph">
+                <canvas id="lineChart" width="800" height="400"></canvas>
+            </div>
+        </div>
+    
+        <script>
+            const attendanceData = [1, 0, 1, 1, 1, 0, 1, 1, 1, 1];
+            const labels = ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 8', 'Day 9', 'Day 10'];
+            const attendanceLabels = attendanceData.map((value) => (value === 1 ? 'P' : 'A'));
+    
+            const ctx = document.getElementById('lineChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Attendance',
+                        data: attendanceData,
+                        backgroundColor: 'rgba(89, 151, 244, 0.2)',
+                        borderColor: 'rgba(89, 151, 244, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(89, 151, 244, 1)',
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        pointStyle: attendanceLabels
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 1.2
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    </div>
+    <div class="Extracurricular">
+        <body>
+            <h1 align="center">Data Driven Insights</h1>
+            <div id="statistics-container">
+                <div class="box1">
+                    <p id="average">Class Average: </p>
+                </div>
+                <div class="box2">
+                    <p id="highest">Highest Score: </p>
+                </div>
+                <div class="box3">
+                    <p id="lowest">Lowest Score: </p>
+                </div>
+                <div class="box4">
+                    <p id="standard-deviation">Standard Deviation: </p>
+                </div>            
+                <div class="box5">
+                    <p id="average-range">Average Range: </p>
+                </div>
+            </div>
+            
+        </body>
+        <script>// Student scores
+            const scores = [85, 92, 78, 90, 88, 95];
+            
+            // Calculate class average
+            const calculateAverage = (scores) => {
+                const sum = scores.reduce((total, score) => total + score, 0);
+                return sum / scores.length;
+            };
+            
+            // Find highest score
+            const findHighest = (scores) => {
+                return Math.max(...scores);
+            };
+            
+            // Find lowest score
+            const findLowest = (scores) => {
+                return Math.min(...scores);
+            };
+            
+            // Calculate standard deviation
+            const calculateStandardDeviation = (scores) => {
+                const average = calculateAverage(scores);
+                const squaredDifferences = scores.map(score => Math.pow(score - average, 2));
+                const sumOfSquaredDifferences = squaredDifferences.reduce((total, squaredDiff) => total + squaredDiff, 0);
+                const variance = sumOfSquaredDifferences / scores.length;
+                return Math.sqrt(variance);
+            };
+            
+            // Calculate average range
+            const calculateAverageRange = (average, standardDeviation) => {
+                const lowerBound = average - standardDeviation;
+                const upperBound = average + standardDeviation;
+                return `${lowerBound.toFixed(1)} - ${upperBound.toFixed(1)}`;
+            };
+            
+            // Display statistics on the webpage
+            const displayStatistics = () => {
+                const averageElement = document.getElementById('average');
+                const highestElement = document.getElementById('highest');
+                const lowestElement = document.getElementById('lowest');
+                const standardDeviationElement = document.getElementById('standard-deviation');
+                const averageRangeElement = document.getElementById('average-range');
+            
+                const average = calculateAverage(scores);
+                const highest = findHighest(scores);
+                const lowest = findLowest(scores);
+                const standardDeviation = calculateStandardDeviation(scores);
+                const averageRange = calculateAverageRange(average, standardDeviation);
+            
+                averageElement.textContent += average.toFixed(2);
+                highestElement.textContent += highest;
+                lowestElement.textContent += lowest;
+                standardDeviationElement.textContent += standardDeviation.toFixed(2);
+                averageRangeElement.textContent += averageRange;
+            };
+            
+            // Call the function to display statistics
+            displayStatistics();
+            </script>
+    </div>
+    <div class="guide2"><b>
+        <img src="img/gb5.png" alt="", height="250px", width="259px">
+        <li><a href="#">Study Material Upload</a></li><br>
+        <li><a href="#" onclick="open_notice()">Attendance Update</a></li><br>
+        <li><a href="#">Marks Update</a></li><br>
+        <li><a href="#">Remaining task</a></li><br>
+        <li><a href="#">Student Performance</a></li><br>
+        <li><a href="#">Class Average</a></li><br>
+        <li><a href="#">Student's request</a></li><br>
+        </b>
+    </div>    
+        <div class="guide3" id="guide3">
+            <div class="chattery">
+            <img src="img/gb2.png " alt="", height="150px", width="150px",><br>
+            <div class="close4">
+                <a href="groupchatbox.html"><button class="Classchat4">Student</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/logged.js"></script>
+</body>
+</html>

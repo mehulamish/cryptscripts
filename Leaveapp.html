@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAVE APPLICATION</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        .container {
+            background-color: rgb(254, 230, 200);
+            padding: 5%;
+            margin: 2.5% auto;
+            width: 60%;
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+            border: 1.5% solid rgba(37, 0, 106, 0.701);
+            border-radius: 2%;
+            box-shadow: 0 2% 4.5% rgba(111, 42, 238, 0.3);
+            overflow: hidden;
+        }
+   
+        .container h3 {
+            text-align: center;
+            color: rgba(2, 31, 200, 0.947);
+            text-decoration: underline;
+        }
+
+        .container form {
+            margin-top: 5%;
+            text-align: center;
+        }
+
+        .container input[type="text"] {
+            width: 50%;
+            padding: 2%;
+            margin-bottom: 2%;
+        }
+
+        .container textarea {
+            width: 100%;
+            padding: 2.5%;
+            margin-bottom: 2.5%;
+            resize: vertical;
+        }
+
+        .container input[type="submit"] {
+            padding: 2.5% 5%;
+            background-color: rgba(2, 31, 200, 0.7);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function showMessage() {
+            alert("Message Successfully Sent");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h3>LEAVE APPLICATION</h3>
+        <form>
+            <p>LEAVE TYPE:</p>
+            <input type="text" name="leaveType" placeholder="Enter leave type">
+
+            <p>REASON:</p>
+            <textarea name="reason" placeholder="Enter reason" onkeydown="if(event.keyCode==13){return event.keyCode=16;}"></textarea>
+
+            <p>FROM DATE:</p>
+            <input type="text" name="fromDate" placeholder="Select start date" class="datepicker">
+
+            <p>TO DATE:</p>
+            <input type="text" name="toDate" placeholder="Select end date" class="datepicker"><br>
+            
+            <input type="submit" value="Submit" onclick="showMessage()">
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr(".datepicker", {
+            dateFormat: "Y-m-d"
+        });
+    </script>
+</body>
+</html>

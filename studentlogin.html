@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <script src="js/homepage.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</head>
+<style>
+    body{
+        background-color:rgb(184, 206, 199);
+    }
+    .mid1{
+    display: block;
+    width: 97%;
+    height: 7%;
+    margin: 10px auto;
+    border: 2px solid red;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: inline-block;
+    border: 2px solid rgb(89, 151, 244);
+    background-color: rgb(89, 151, 244);
+    opacity: 0.8;
+    border-radius: 25px;
+}
+.navbar1{
+    display: inline-block;
+}
+.navbar1 li{
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+}
+.navbar1 li a{
+    color: white;
+    text-decoration: none ;
+    padding: 34px 23px;
+}
+.navbar1 li a:hover, .navbar li a.active{
+    text-decoration: underline ;
+    color: gray;
+}
+.guide1{
+    background-color: rgb(116, 250, 79);
+    opacity: 0.9;
+display: block;
+width: 17%;
+height: 796px;
+margin: 20px;
+border: 2px solid rgb(116, 250, 79);
+display: inline-block;
+position:absolute;
+top: 80px;
+}
+.guide1 li{
+    color: white;
+    font-size: 15px;
+    list-style-type: none;
+}
+.guide1 li a{
+    color: white;
+    text-decoration: none ;
+    padding: 34px 23px;
+}
+.guide1 li a:hover, .guide1 li a.active{
+    text-decoration: underline ;
+    color: gray;
+}
+
+.attendance{
+    display: block;
+width: 60%;
+height: 365px;
+margin: 20px auto;
+margin-top: 100px;
+border: 2px solid rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);
+border-radius: 20px;
+}
+.performance{
+    display: block;
+width: 60%;
+height: 250px;
+margin: 20px auto;
+border: 2px solid rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);
+border-radius: 20px;
+}
+.Extracurricular{
+    display: block;
+width: 60%;
+height: 200px;
+margin: 20px auto;
+border: 2px solid rgb(255, 255, 255);
+background-color: rgb(255, 255, 255);
+border-radius: 20px;
+}
+.guide2{
+    background-color: rgb(244, 119, 119);
+    opacity: 0.9;
+    list-style-type: none;
+display: block;
+width: 17%;
+height: 523px;
+margin: 20px;
+border: 2px solid rgb(244, 119, 119);
+display: inline-block;
+position:absolute;
+right: 10px;
+top: 80px;
+}
+.guide1{
+    background-color:  rgb(23, 73, 180);
+    opacity: 0.9;
+display: block;
+width: 17%;
+height: 796px;
+margin: 20px;
+border: 2px solid rgb(23, 73, 180);
+display: inline-block;
+position:absolute;
+top: 80px;
+}
+.guide2 li{
+    color: white;
+    font-size: 15px;
+}
+.guide2 li a{
+    color: white;
+    text-decoration: none ;
+    padding: 34px 23px;
+}
+.guide2 li a:hover, .guide2 li a.active{
+    text-decoration: underline ;
+    color: gray;
+}
+
+.guide3{
+    background-color: rgb(116, 250, 79);
+    opacity: 0.9;
+    display: block;
+width: 17%;
+height: 251px;
+margin: 20px;
+border: 2px solid rgb(116, 250, 79);
+display: inline-block;
+position:absolute;
+right: 10px;
+top: 626px;
+}
+.chattery{
+    display: block;
+width: 17%;
+height: 251px;
+margin: 20px auto;
+display: inline-block;
+position:absolute;
+right: 170px;
+}
+
+.Classchat2{
+    display: block;
+width: 60px;
+height: 40px;
+margin: 20px;
+display: inline-block;
+position:absolute;
+left: 0px;
+}
+.Classchat3{
+    display: block;
+width: 60px;
+height: 40px;
+margin: 20px;
+display: inline-block;
+position:absolute;
+left: 65px;
+}
+
+.nav-break{
+    width: 1150px;
+}
+.container-chart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .marks-chart {
+        width: 40%;
+        height: 1%;
+    }
+
+    .marks-graph {
+        margin-left: 4%;
+        width: 40%;
+        height: 40%;
+    }
+    .container-attend {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+    }
+
+    .attendance-graph {
+        width: 220px;
+        height: 220px;
+        position: relative;
+    }
+
+    .attendance-label {
+        position: absolute;
+        top: 42%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+    h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.container77 {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f3f3f3;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.assignment {
+    display: flex;
+    justify-content: space-between;
+}
+
+.assignment-name {
+    font-weight: bold;
+}
+
+.assignment-date {
+    color: #777;
+}
+</style>
+<body>
+    <div class="homepage2">
+    <header class="header">
+        
+          
+        
+        <div class="mid1">
+            <ul class="navbar1">
+                <li><a href="studentprof.html">Student profile</a></li>
+                <li><div class="nav-break"> </div></li>
+                <li><a href="schoolweb.html">Logout</a></li>
+            </ul> 
+        </div>
+    </header>
+    <div class="guide1">
+        <img src="img/logo.png" alt="", height="250px", width="258px"><br>
+        <b>
+        <li><a href="#">Exam schedule</a></li><br>
+        <li><a href="messagetoteacher.html">Message To Teacher</a></li><br>
+        <li><a href="#">Project Update</a></li><br>
+        <li><a href="Leaveapp.html">Leave Application</a></li><br>
+        <li><a href="#">Marks discripancy</a></li><br>
+        <li><a href="#">Grades</a></li><br>
+        <li><a href="#">Co-Curricular</a></li><br>
+        <li><a href="#">Competitions</a></li><br>
+        <li><a href="#">Achievement / Awards</a></li><br>
+        <li><a href="#">Library Due</a></li><br>
+        <li><a href="#">Payment</a></li><br>
+        </b>
+    </div>
+    <div class="attendance">
+        <div class="student-charts">
+            <div class="container-chart">
+                <div class="marks-chart">
+                    <canvas id="marksChart" width="auto" height="auto"></canvas>
+                </div>
+                <div class="marks-graph">
+                    <canvas id="barGraph" width="auto" height="auto"></canvas>
+                </div>
+            </div>
+        
+            <script>
+                // Array of student marks
+                const marks = [85, 92, 78, 90, 88, 95];
+        
+                // Get the canvas element
+                const marksCanvas = document.getElementById('marksChart').getContext('2d');
+        
+                // Create the chart
+                new Chart(marksCanvas, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Mark 1', 'Mark 2', 'Mark 3', 'Mark 4', 'Mark 5', 'Mark 6'],
+                        datasets: [{
+                            label: 'Student Marks',
+                            data: marks,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(255, 206, 86, 0.6)',
+                                'rgba(75, 192, 192, 0.6)',
+                                'rgba(153, 102, 255, 0.6)',
+                                'rgba(255, 159, 64, 0.6)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Student Marks Distribution'
+                        }
+                    }
+                });
+        
+                // Get the canvas element
+                const graphCanvas = document.getElementById('barGraph').getContext('2d');
+        
+                // Create the graph
+                new Chart(graphCanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Mark 1', 'Mark 2', 'Mark 3', 'Mark 4', 'Mark 5', 'Mark 6'],
+                        datasets: [{
+                            label: 'Student Marks',
+                            data: marks,
+                            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Student Marks'
+                        }
+                    }
+                });
+            </script>
+    
+        </div>
+    </div>
+    <div class="performance">
+        <div class="container-attend">
+            <div class="attendance-graph">
+                <canvas id="doughnutChart" width="200" height="200"></canvas>
+                <div class="attendance-label" id="attendanceLabel"></div>
+            </div>
+        </div>
+    
+        <script>
+            const attendanceData = [1, 0, 1, 1, 1, 0, 1, 1, 1, 1];
+            const labels = ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 8', 'Day 9', 'Day 10'];
+            const totalAttendance = attendanceData.filter(value => value === 1).length;
+            const totalAbsent = attendanceData.filter(value => value === 0).length;
+            const totalDays = attendanceData.length;
+            const attendancePercentage = ((totalAttendance / totalDays) * 100).toFixed(2);
+    
+            const doughnutData = {
+                labels: ['Present', 'Absent'],
+                datasets: [{
+                    data: [totalAttendance, totalAbsent],
+                    backgroundColor: ['rgba(89, 151, 244, 0.8)', 'rgba(0, 0, 0, 0.8)'],
+                    hoverOffset: 4
+                }]
+            };
+    
+            const ctx = document.getElementById('doughnutChart').getContext('2d');
+            const doughnutChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: doughnutData,
+                options: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom'
+                        },
+                        tooltip: {
+                            enabled: false
+                        }
+                    },
+                    cutout: '52%',
+                    animation: {
+                        onComplete: function(animation) {
+                            const centerLabel = document.getElementById('attendanceLabel');
+                            centerLabel.textContent = `${attendancePercentage}%`;
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    <div class="Extracurricular">
+        <header>
+            <h1>Upcoming Assignments</h1>
+        </header>
+    
+        <div class="container77">
+            <ul id="assignments-list"></ul>
+        </div>
+    
+        <script>
+            const assignments = [
+        { name: 'Math Assignment', dueDate: '2023-06-10' },
+        { name: 'Science Lab Report', dueDate: '2023-06-15' },
+        { name: 'English Essay', dueDate: '2023-06-18' },
+    ];
+    
+    const assignmentsList = document.getElementById('assignments-list');
+    
+    // Create and append list items for each assignment
+    assignments.forEach(assignment => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('assignment');
+    
+        const assignmentName = document.createElement('span');
+        assignmentName.classList.add('assignment-name');
+        assignmentName.textContent = assignment.name;
+    
+        const assignmentDate = document.createElement('span');
+        assignmentDate.classList.add('assignment-date');
+        assignmentDate.textContent = `Due Date: ${assignment.dueDate}`;
+    
+        listItem.appendChild(assignmentName);
+        listItem.appendChild(assignmentDate);
+    
+        assignmentsList.appendChild(listItem);
+    });
+        </script>
+    </div>
+    
+    <div class="guide2"><b>
+        <img src="img/gb5.png" alt="", height="250px", width="259px">
+        <li><a href="#">Study Material</a></li><br>
+        <li><a href="#">Group Discussion</a></li><br>
+        <li><a href="#">Sport's Update</a></li><br>
+        <li><a href="#">Pending work</a></li><br>
+        <li><a href="#">Teacher's Review</a></li><br>
+        <li><a href="#">Class Average</a></li><br>
+        <li><a href="#">Extra class request</a></li><br>
+        </b>
+    </div>    
+        <div class="guide3" id="guide3">
+            <div class="chattery">
+            <img src="img/gb1.png " alt="", height="150px", width="150px"><br>
+            <div class="close2">
+                <a href="groupchatbox.html"><button class="Classchat2">Class</button></a>
+            </div>
+            <div class="close3">
+                <a href="groupchatbox.html"><button class="Classchat3">Teacher</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

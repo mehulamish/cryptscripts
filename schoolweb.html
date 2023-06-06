@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptscripts Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/homepage.js"></script>
+</head>
+<style>
+    body{
+    color: whitesmoke;
+    margin: 0px;
+    padding: 0px;
+    background: url('img/gb5.png');
+    height: 700px;
+    width: 1000px; 
+}
+.left{
+    position: absolute;
+    left: 34px;
+    top: 20px;
+    display: inline-block;
+}
+.left img{
+    width: 75px;
+    height: 65px;
+    border-radius: 5px;
+
+}
+
+.right{
+    position: absolute;
+    right: 34px;
+    top: 20px;
+    display: inline-block;
+    border: 2px solid rgb(89, 151, 244);
+    background-color: rgb(89, 151, 244);
+    opacity: 0.7;
+    border-radius: 25px;
+}
+.navbar{
+    display: inline-block;
+}
+.navbar li{
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+}
+.navbar li a{
+    color: white;
+    text-decoration: none ;
+    padding: 34px 23px;
+}
+.navbar li a:hover, .navbar li a.active{
+    text-decoration: underline ;
+    color: gray;
+}
+.container1{
+    position: absolute;
+    border: 4px solid rgb(89, 151, 244);
+    top: 130px;
+    left: 350px;
+    height: 250px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: rgb(89, 151, 244);
+    opacity: 0.8;
+    box-shadow: 2 2 20px rgba(45, 199, 242, 0.824);
+}
+.container1 img{
+    position: absolute;
+    border-radius: 15px;
+}
+.container2{
+    position: absolute;
+    border: 4px solid rgb(89, 151, 244);
+    top: 430px;
+    right: 350px;
+    height: 250px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: rgb(89, 151, 244);
+    opacity: 0.8;
+    box-shadow: 2 2 20px rgba(45, 199, 242, 0.824);
+}
+.container2 img{
+    border-radius: 15px;
+}
+.formbox1{
+    position: absolute;
+    right: 80px;
+}
+.formbox2{
+    position: absolute;
+    left: 80px;
+}
+.Submit-button1{
+    box-sizing: border-box;
+  flex-shrink: 0;
+  width: min-content; /* 102px */
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px 15px 15px;
+  box-shadow: 0px 0.7065919983928324px 0.7065919983928324px -0.625px rgba(27, 96, 164, 0.808), 0px 1.8065619053231785px 1.8065619053231785px -1.25px rgba(62, 164, 207, 0.735);
+  background-color: #cebbbb;
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 8px;
+}
+.Submit-button2{
+    box-sizing: border-box;
+  flex-shrink: 0;
+  width: min-content; /* 102px */
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px 15px 15px;
+  box-shadow: 0px 0.7065919983928324px 0.7065919983928324px -0.625px rgba(27, 96, 164, 0.808), 0px 1.8065619053231785px 1.8065619053231785px -1.25px rgba(62, 164, 207, 0.735);
+  background-color: #302ea3;
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  border-radius: 8px;
+}
+
+</style>
+<body>
+    <div id="Homepage">
+    <header class="header">
+        <!--logo-->
+        <div class="left">
+            <img src="img/logo.png" alt="">
+        </div>    
+        <!--navigation-->
+        <div class="right">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" onclick="open_notice()">Notice Board</a></li>
+                <li><a href="#">School Details</a></li>
+                <li><a href="#">Achievement</a></li>
+            </ul> 
+        </div>
+    </header>
+    <div class="container1">
+        <img src="img/gb7.png" alt="", height="250px", width="250px">
+        <div class="formbox1">
+        <h1>Student login</h1>
+        <form action ="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your regno">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your password">
+            </div><br>
+            <div>
+                <a href="studentlogin.html"><button type ="button" class="Submit-button1">Submit</button></a>
+            </div>
+        </form>
+        </div>
+    </div>
+    <div class="container2">
+        <img src="img/gb6.png" alt="", height="250px", width = "250px", align ="right">
+        <div class="formbox2">
+            <h1>Employee login</h1>
+            <form>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your empid">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your password">
+                </div><br>
+                <div>
+                    <a href="teacherlogin.html"><button type ="button" class="Submit-button1">Submit</button></a>
+                </div>
+            </form>
+            </div>
+    </div>
+    </div>
+
+
+
+
+    <div class="noticeboard1" id="noticeboard1" hidden="true">
+        <div class="close1">
+            <button class="close-button1" onclick="close_notice()">X</button>
+        </div>
+        <b><h3>NOTICE BOARD</h3><br><br>
+        <ul class="notice-list">
+            <li><span class="notice-item">Last date of gym fees submission:</span> The last date for submitting gym fees for the current term is <span class="notice-date">June 15, 2023</span>. Please ensure timely payment to avoid any inconvenience.</li><br>
+            <li><span class="notice-item">Annual function begins:</span> We are excited to announce that the annual function will commence on <span class="notice-date">July 1, 2023</span>. Students are requested to actively participate and showcase their talents. Let's make it a memorable event together!</li><br>
+            <li><span class="notice-item">Inter-house competition:</span> The inter-house competition will be held on <span class="notice-date">June 25, 2023</span>. All students are encouraged to participate and contribute to their respective house's success. Get ready for a healthy and spirited competition!</li><br>
+            <li><span class="notice-item">Science exhibition:</span> The annual science exhibition is scheduled for <span class="notice-date">July 10, 2023</span>. Students are encouraged to showcase their scientific projects and discoveries. Let's explore the wonders of science together!</li><br>
+            <li><span class="notice-item">Parent-Teacher Meeting:</span> A parent-teacher meeting will be held on <span class="notice-date">June 30, 2023</span>. Parents are requested to attend and discuss their child's academic progress and any concerns they may have. Your participation is highly appreciated!</li>
+        </ul></b>
+    </div>
+</body>
+</html>
