@@ -1,0 +1,65 @@
+
+
+
+
+
+.noticeboard1 {
+    background-color: rgba(89, 151, 244, 0.7);
+    padding: 5% 6%;
+    margin: 5% auto; 
+    width: 80%;
+    font-family: 'Courier New', Courier, monospace;
+    height: 65%;
+    position: relative;
+    left: 25%;
+    border: 5px solid #3f97fa;
+    background: linear-gradient(180deg, #07daed 0%, rgb(89, 151, 244) 100%);
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(89, 151, 255, 0.499);
+    overflow: hidden;
+}
+
+.noticeboard1 h3 {
+    text-align: center;
+    color: rgba(2, 31, 200, 0.947);
+    text-decoration: underline;
+    margin: 0;
+    padding: 10px 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+}
+.noticeboard1 ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.noticeboard1 li {
+    margin-bottom: 10px;
+}
+.notice-list{
+    color:black;
+}
+.close-button1 {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgba(2, 31, 200, 0.947);
+    background-color: transparent;
+    border: none;
+}
+
+.close-button1:hover {
+    color: rgba(255, 0, 0, 0.8);
+}
+
+
