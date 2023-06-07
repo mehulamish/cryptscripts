@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Discussions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 5px auto;
+    padding: 5px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+}
+
+#chat-messages {
+    height: 450px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+#send-button {
+    padding: 1.5% 3%;
+    margin-left: 2.5%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div>
+            Topics: <br>1. Reduce, Reuse, Recycle
+                  <br>2. Education System of India.
+                  <br>3. Freedom: Is it a Myth?
+                  <br>4. How has COVID affected the Indian students ?
+                  <br>5. Urban v/s Rural India
+        </div>
+        <div id="chat-messages">
+            <div><b><i>
+                Group:2 <br>Memebers<br>
+                1. Alpha<br>
+                2. Beta<br>
+                3. Gamma<br>
+                4. Delta<br>
+                </i></b>
+            </div><br>
+            <b>Yash:</b> So you need to select one of the topic for group discussion. <br>Keep a note that you need to attach a report about all the sub-topics covered during the GD!!
+            <br></br>Good Luck!!
+        </div>
+        <div class="input-container">
+            <input type="text" id="name-input" value="MEHUL" placeholder="Your Name">
+            <input type="text" id="message-input" placeholder="Enter your message">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="js/homepage.js"></script>
+</body>
+</html>
