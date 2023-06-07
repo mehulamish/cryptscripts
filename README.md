@@ -41,7 +41,6 @@ Contributions to the Student Engagement and Analytics Platform are welcome. Feel
 
 ## Authors
 - Mehul Mathur - [@mehulamish](https://github.com/mehulamish)
-- Yash Shrivastava - [@YASH123SHRI](https://github.com/YASH123SHRI)
 
 ## Acknowledgements
 - Special thanks to the contributors and developers who helped make this project possible.
